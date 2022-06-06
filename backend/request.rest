@@ -1,0 +1,28 @@
+### GET ALL USERS
+GET http://localhost:5000/users
+
+### GET USER BY ID
+GET http://localhost:5000/users/629987c9d7ec61a031dc45fc
+
+### POST A USER
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name":"Andra",
+    "email":"andra@gmail.com",
+    "gender":"Male"
+}
+
+### UPDATE USER
+PATCH  http://localhost:5000/users/62998802d7ec61a031dc45ff
+Content-Type: application/json
+
+{
+    "name":"Neni",
+    "email":"neni@gmail.com",
+    "gender":"Female"
+}
+
+### DELETE USER
+DELETE  http://localhost:5000/users/629987c9d7ec61a031dc45fc
