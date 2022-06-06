@@ -1,9 +1,11 @@
 const app = require("./app");
-const env = require("dotenv");
+
 const connectDatabase = require("./config/database");
 
 //config env
-env.config({ path: "config/config.env" });
+if (process.env.NODE_ENV !== "PRODUCTION") {
+  require("dotenv").config({ path: "config/config.env" });
+}
 
 // connect database
 connectDatabase();

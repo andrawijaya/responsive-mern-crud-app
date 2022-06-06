@@ -9,6 +9,11 @@ app.use(cors());
 app.use(express.json());
 app.use(UserRoute);
 
+//config env
+if (process.env.NODE_ENV !== "PRODUCTION") {
+  require("dotenv").config({ path: "config/config.env" });
+}
+
 //production;
 
 app.use(express.static(path.join(__dirname, "../frontend/build")));
